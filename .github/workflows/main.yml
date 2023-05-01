@@ -14,5 +14,5 @@ jobs:
         java-version: 14
 
      - name: Build project with Maven
-       run: mvn -V
+       run: maven clean install
            
