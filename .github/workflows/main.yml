@@ -13,6 +13,11 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Build with Maven
-        run: maven clean install
+      - name: Setup Maven Action
+        uses: s4u/setup-maven-action@v3
+        with:
+          java-version: 17
+          maven-version: ${{ matrix.maven }}
+
+      - run: mvn -V
            
