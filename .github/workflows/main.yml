@@ -9,6 +9,7 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@3
         with:
+           distribution: oracle
            java-version: 11
 
       - name: Build project
