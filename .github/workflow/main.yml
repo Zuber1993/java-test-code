@@ -1,0 +1,15 @@
+name: test maven
+on: push
+jobs:
+  clone:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download code
+        uses: action/checkout@v3
+      - name: Setup Java
+        uses: action/setup-java@1
+        with:
+           java-version: 14 
+
+      - name: Build project
+        run: mvn install
